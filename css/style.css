@@ -1,0 +1,39 @@
+.product {
+    flex-basis: calc(25% - 1rem); /* Ajusta el ancho de las columnas de productos */
+    margin: 0.5rem;
+    overflow: hidden; /* Para recortar el desbordamiento de la imagen al aplicar el zoom */
+    text-align: center; /* Centrar el contenido del producto */
+    border-radius: 1rem;
+  }
+
+  .product img {
+    transition: transform 0.2s; /* Agrega una transición suave al efecto de zoom */
+  }
+
+  .product:hover {
+    transform: scale(1.03);
+    cursor: pointer; /* Amplía la imagen al 120% en el hover */
+  }
+
+  .product-name {
+    margin: 1rem; /* Espacio superior para el nombre del producto */
+    font-weight: bold; /* Estilo en negrita para el nombre del producto */
+  }
+
+  @media (max-width: 1024px) {
+    .product {
+      flex-basis: calc(33.33% - 1rem); /* Ajusta el ancho de las columnas de productos en pantallas medianas */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .product {
+      flex-basis: calc(50% - 1rem); /* Ajusta el ancho de las columnas de productos en pantallas más pequeñas */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product {
+      flex-basis: 100%; /* Ajusta el ancho de las columnas de productos en pantallas aún más pequeñas */
+    }
+  }
